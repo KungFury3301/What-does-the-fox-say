@@ -1,0 +1,41 @@
+
+
+
+<html>
+<head>
+    <title>Cat Sounds</title>
+    <link rel="stylesheet" type="text/css" href="Catstyle.css">
+	
+</head>
+<body>
+
+<div id="image-container" style="position: relative;">
+    <div id="title">Puzzle Paws</div>
+    
+</div>
+
+
+   <div id="cat-container">
+        <img id="cat-image" src="C:\Users\James\Documents\Aetherium 3301\Monthly puzzle 1\a cute working cat.webp" alt="Cat" onclick="playCatSound()">
+        
+        <!-- Overlay input and button -->
+		
+		
+           <div class="code-entry">
+  <input type="text" id="secret-code" placeholder="Enter the code...">
+  <button onclick="checkCode()">Submit</button>
+  <!-- Error message element, initially hidden -->
+  <p id="error-message" style="color: red; display: none;">Incorrect code. Try again.</p>
+  <p id="success-message" style="display: none;">Correct Code. *Meow*</p>
+
+</div>
+
+
+    </div>
+
+    <audio id="regular-sound" src="C:\Users\James\Documents\Aetherium 3301\Monthly puzzle 1\funny-meow-110120.mp3"></audio>
+    <audio id="special-sound" src="C:\Users\James\Documents\Aetherium 3301\Monthly puzzle 1\spy-radio-station-34545.mp3"></audio>
+    <script src="CatY1M1.js"></script>
+</body>
+</html>
+

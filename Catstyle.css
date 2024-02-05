@@ -1,0 +1,171 @@
+body {
+    background-color: #5B787C; /* Or use the color you picked */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Use full viewport height */
+}
+
+
+#cat-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#cat-image {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 80vh; /* Adjust max-height to fit the viewport */
+}
+
+
+
+/* Ensure the input and button are displayed as block elements */
+.code-entry {
+  text-align: center;
+  margin-top: 0px; /* Adjust as needed */
+}
+
+#secret-code {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.code-entry button {
+  padding: 10px;
+  background-color: #000; /* Or any color that fits your theme */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.code-entry button:hover {
+  background-color: #0000d; /* Darken button when hovered for better UX */
+}
+
+/* Input field styling */
+input[type="text"]#secret-code {
+  background-color: transparent; /* Make background transparent */
+  border: 2px solid #000; /* Green border to stand out */
+  color: #000; /* Green text to match the theme */
+  font-size: 1.2em; /* Larger font size for emphasis */
+  padding: 10px; /* Spacing inside the input */
+  margin-top: 0px; /* Space from the text above */
+  width: 250px; /* Set a fixed width */
+  outline: none; /* Remove the outline to keep the style clean */
+  box-shadow: none; /* Add a glow effect */
+  text-shadow: none; /* Green text shadow for a mysterious glow */
+}
+
+/* Button styling */
+button {
+  background-color: #333; /* Black background to contrast the input */
+  border: 2px solid #000; /* Green border to match the input field */
+  color: #000; /* Green text */
+  padding: 10px 20px; /* Padding for a larger clickable area */
+  font-size: 1.2em; /* Larger font size to match the input */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  box-shadow: 0 0 10px #000; /* Glow effect */
+  text-shadow: 0 0 5px #000; /* Text glow for mystery */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #000; /* Change background to green on hover */
+  color: #333; /* Change text color to black on hover */
+  border-color: #333; /* Change border color to black on hover */
+}
+
+
+/* Error message styling */
+#error-message {
+  color: red;
+  opacity: 0; /* Start with the message transparent */
+  transition: opacity 1s ease; /* Smooth transition for the fade effect */
+  display: none; /* Keep it hidden until an error occurs */
+}
+
+
+#success-message {
+    display: none; /* Initially hidden */
+    color: green; /* Green text color */
+    /* Other styling as needed, such as font size, position, etc. */
+}
+
+
+/* Add this to your style.css */
+
+input[type="text"]#secret-code::placeholder {
+  color: #4a4a4a; /* Darker grey for better visibility */
+  opacity: 1; /* Ensure full opacity for the placeholder text */
+}
+
+
+
+#title {
+    position: absolute;
+    top: 50px; /* Adjust this value to move the title up or down */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #none; /* Navy black background */
+    color: #Black; /* White text */
+    padding: 5px 10px;
+    border-radius: 5px; /* Optional: if you want rounded corners */
+    font-size: 24px; /* Adjust as per your design */
+    font-family: 'Your font', sans-serif;
+    z-index: 10; /* Ensure it's above the image */
+}
+
+#title {
+    font-family: 'roboto', sans-serif;
+    /* Other styles remain unchanged */
+	position: absolute; top: 0px; left: 50%; transform: translateX(-50%); 
+         color: #clear; /* Or any color you prefer */
+         font-size: 24px; /* Adjust size as needed */
+         white-space: nowrap; /* Ensures the text stays on a single line */
+         font-family: 'Roboto', sans-serif;
+
+	
+}
+
+
+#cat-image {
+    transition: transform 0.1s ease; /* Smooth transition for the transform */
+    cursor: pointer; /* Change cursor to indicate clickable item */
+}
+
+#cat-image:hover {
+    transform: scale(1.02); /* Slightly larger on hover */
+}
+
+#cat-image:active {
+    transform: scale(0.95); /* Squeeze effect when clicked */
+    cursor: grabbing; /* Cursor changes to grabbing during click */
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.distortion-effect {
+  animation: shake 0.5s; /* Shake duration */
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  filter: blur(2px); /* Adjust the blur level */
+}
