@@ -15,7 +15,7 @@ function playCatSound() {
     // Increment the click counter and play sound as usual
     clickCounter++;
 	
-    if (clickCounter === 100){
+    if (clickCounter === 7){
         const specialSound = document.getElementById('special-sound');
         specialSound.play();
         distortionActive = true; // Set the flag to true
