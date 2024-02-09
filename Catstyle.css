@@ -8,6 +8,7 @@ body {
     justify-content: center;
     height: 100vh; /* Use full viewport height */
 	color: white;
+	
 }
 
 
@@ -122,17 +123,8 @@ input[type="text"]#secret-code::placeholder {
     z-index: 10; /* Ensure it's above the image */
 }
 
-#title {
-    font-family: 'roboto', sans-serif;
-    /* Other styles remain unchanged */
-	position: absolute; top: 0px; left: 50%; transform: translateX(-50%); 
-         color: #clear; /* Or any color you prefer */
-         font-size: 24px; /* Adjust size as needed */
-         white-space: nowrap; /* Ensures the text stays on a single line */
-         font-family: 'Roboto', sans-serif;
 
-	
-}
+
 
 
 #cat-image {
@@ -169,4 +161,28 @@ input[type="text"]#secret-code::placeholder {
   animation-iteration-count: infinite;
   transform-origin: 50% 50%;
   filter: blur(2px); /* Adjust the blur level */
+}
+
+.header {
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+#title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 48px; /* Adjust size as needed */
+    margin: 0;
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#sound-toggle {
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px; /* Adjust size as needed */
+    position: absolute;
+    left: 150px;
+    top: 20px;
 }
