@@ -184,5 +184,5 @@ input[type="text"]#secret-code::placeholder {
     font-size: 18px; /* Adjust size as needed */
     position: absolute;
     left: 150px;
-    top: 20px;
+    top: 30px;
 }
