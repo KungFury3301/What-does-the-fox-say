@@ -56,7 +56,7 @@ input[type="text"]#secret-code {
   color: #000; /* Green text to match the theme */
   font-size: 1.2em; /* Larger font size for emphasis */
   padding: 10px; /* Spacing inside the input */
-  margin-top: 0px; /* Space from the text above */
+  margin-top: 10px; /* Space from the text above */
   width: 250px; /* Set a fixed width */
   outline: none; /* Remove the outline to keep the style clean */
   box-shadow: none; /* Add a glow effect */
