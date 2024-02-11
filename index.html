@@ -33,8 +33,11 @@
   <button onclick="checkCode()">Submit</button>
   <!-- Error message element, initially hidden -->
   <p id="error-message" style="color: red; display: none;">Incorrect code. Try again.</p>
-  <p id="success-message" style="display: none;">Correct Code. *Meow*</p>
-
+ 
+<!-- Place this somewhere in your body tag -->
+<div id="correct-message" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3em; pointer-events: none; z-index: 100;">
+  Correct Code<br>Puzzle Solved!!
+</div>
 </div>
 
 
