@@ -44,27 +44,36 @@ document.getElementById('clickable-image').addEventListener('click', playCatSoun
 
 
 
-// Function to show a message with an optional fade-out effect
 function checkCode() {
     var secretCodes = ["Wombat", "WOMBAT", "wombat"]; // Array of valid codes
     var userInput = document.getElementById('secret-code').value;
-    var errorMessage = document.getElementById('error-message');
-    var successMessage = document.getElementById('success-message'); // Ensure you have an element with this ID
+	var errorMessage = document.getElementById('error-message');
+    var correctMessage = document.getElementById('correct-message'); // Get the correct message element
 
     // Check if userInput matches any of the secretCodes
     if (secretCodes.includes(userInput)) {
-        // Show the success message
-        successMessage.textContent = 'Correct code! *Meow*';
-        successMessage.style.color = 'green'; // Make the text color green
-        successMessage.style.display = 'block';
-        successMessage.style.opacity = '1';
+		document.getElementById('celebration-sound').play()
+		 // If the distortion effect is active, remove it
+        if (distortionActive) {
+            document.getElementById('special-sound').pause(); // Stop the special sound
+            document.getElementById('special-sound').currentTime = 0; // Reset the sound to the start
+            document.body.classList.remove('distortion-effect'); // Remove the distortion effect
+			  
+            distortionActive = false; // Update the flag
+        }
+		
+      
 
-        // Set a delay of 2 seconds, then redirect to the next page
+        // If correct, show the correct message
+        correctMessage.style.display = 'block';
+		// Set a delay of 2 seconds, then redirect to the next page
         setTimeout(function() {
             window.location.href = 'https://www.aetherium3301.com/store';
-        }, 2000);
+        }, 10000);
+        
+        // Add any additional actions you want to occur when the correct code is entered
     } else {
-        // Show the error message
+		 // Show the error message
         errorMessage.textContent = 'Incorrect code. Try again.';
         errorMessage.style.color = 'red'; // Keep the error message red
         errorMessage.style.display = 'block';
@@ -75,6 +84,7 @@ function checkCode() {
             errorMessage.style.opacity = '0';
             errorMessage.style.display = 'none'; // Also hide the element after fading out
         }, 1500);
+        // If incorrect, handle the incorrect case
     }
 }
 
