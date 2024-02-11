@@ -186,3 +186,28 @@ input[type="text"]#secret-code::placeholder {
     left: 150px;
     top: 30px;
 }
+
+/* Add to your existing CSS */
+#correct-message {
+  position: absolute;
+  top: 50%; /* Adjust to position vertically */
+  left: 50%; /* Adjust to position horizontally */
+  transform: translate(-50%, -50%);
+  font-size: 2em; /* Adjust font size as necessary */
+  color: #00ff00; /* Green text color */
+  text-align: center;
+  font-weight: bold;
+  z-index: 10; /* Make sure it's above other elements */
+  pointer-events: none; /* Allows clicks to go through to elements below */
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  border-radius: 10px; /* Rounded corners */
+  border: 3px solid #00ff00; /* Green border */
+  box-shadow: 0px 0px 15px 5px #00ff00; /* Outer glow effect */
+  animation: fadeIn 2s; /* Fade in effect */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
