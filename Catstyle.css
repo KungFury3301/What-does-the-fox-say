@@ -46,14 +46,14 @@ body {
 }
 
 .code-entry button:hover {
-  background-color: #0000d; /* Darken button when hovered for better UX */
+  background-color: #FFD700; /* Darken button when hovered for better UX */
 }
 
 /* Input field styling */
 input[type="text"]#secret-code {
   background-color: transparent; /* Make background transparent */
   border: 2px solid #000; /* Green border to stand out */
-  color: #000; /* Green text to match the theme */
+  color: #FFD700; /* Green text to match the theme */
   font-size: 1.2em; /* Larger font size for emphasis */
   padding: 10px; /* Spacing inside the input */
   margin-top: 10px; /* Space from the text above */
@@ -66,19 +66,19 @@ input[type="text"]#secret-code {
 /* Button styling */
 button {
   background-color: #333; /* Black background to contrast the input */
-  border: 2px solid #000; /* Green border to match the input field */
-  color: #000; /* Green text */
+  border: 2px solid #FFD700; /* Green border to match the input field */
+  color: #FFD700; /* Green text */
   padding: 10px 20px; /* Padding for a larger clickable area */
   font-size: 1.2em; /* Larger font size to match the input */
   cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-  box-shadow: 0 0 10px #000; /* Glow effect */
-  text-shadow: 0 0 5px #000; /* Text glow for mystery */
+  box-shadow: 0 0 10px #FFD700; /* Glow effect */
+  text-shadow: 0 0 5px #FFD700; /* Text glow for mystery */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 /* Button hover effect */
 button:hover {
-  background-color: #000; /* Change background to green on hover */
+  background-color: #FFD700; /* Change background to green on hover */
   color: #333; /* Change text color to black on hover */
   border-color: #333; /* Change border color to black on hover */
 }
@@ -103,7 +103,7 @@ button:hover {
 /* Add this to your style.css */
 
 input[type="text"]#secret-code::placeholder {
-  color: #4a4a4a; /* Darker grey for better visibility */
+  color: #FFD700; /* Darker grey for better visibility */
   opacity: 1; /* Ensure full opacity for the placeholder text */
 }
 
